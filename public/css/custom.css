@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Khmer:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-font-family: "Caudex";
+    --secondary-font-family: 'Noto Sans Khmer';
+    --tertiary-font-family: 'Poppins';
+}
+
+.wrap {
+    margin: auto;
+    width: min(100%, 494px);
+    background-color: #EDF8F0;
+    /* background-color: #F5EDF8; */
+    overflow: hidden;
+    /* height: 3000px; */
+}
+
+#final-part {
+    width: 100%;
+    max-width: 494px;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin-inline: auto;
+    overflow: hidden;
+    isolation: isolate;
+    container-type: inline-size;
+}
+
+.stage-middle {
+    height: min(170.5cqw, 100vh);
+    height: min(170.5cqw, 100svh);
+}
+
+.board-art {
+    display: block;
+    width: 57.44cqw;
+    height: auto;
+}
+
+/* Keep the drifting petals beside the board, clear of its text. */
+.wind-leaf {
+    width: 33.85cqw;
+    bottom: 62.82cqw;
+}
+
+.wind-leaf-left {
+    left: -17.4cqw;
+}
+
+.wind-leaf-right {
+    right: -17.4cqw;
+}
+
+/* The generated petal images have a pale wash around the artwork. Multiply
+   blends that wash into the mint page instead of showing a light rectangle. */
+.wind-leaf img {
+    mix-blend-mode: multiply;
+    opacity: 0.82;
+}
+
+.confetti-layer {
+    opacity: 0.36;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.92) 60%, transparent 100%);
+    mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.92) 60%, transparent 100%);
+}
+
+.gift-decoration {
+    left: -2cqw;
+    width: 35.4cqw;
+    pointer-events: none;
+}
+
+.cart-decoration {
+    right: 0;
+    width: 52cqw;
+    pointer-events: none;
+}
+
+/* On taller phones, keep the lower decorations aligned to the artwork's
+   177:100 portrait composition instead of pinning them to the screen edge. */
+#final-part .confetti-layer,
+#final-part .cart-decoration {
+    bottom: max(0px, calc(100svh - 177cqw)) !important;
+}
+
+#final-part .gift-decoration {
+    bottom: calc(max(0px, calc(100svh - 177cqw)) + 1cqw) !important;
+}
+
+.cart-decoration img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.flag-left img {
+    display: block;
+    width: 65cqw;
+    height: auto;
+}
+
+.flag-right img {
+    display: block;
+    width: 100cqw;
+    height: auto;
+}
+
+.board-flower-top {
+    top: max(0px, calc(min(170.5cqw, 100vh) - 122.82cqw - 11.8cqw));
+    top: max(0px, calc(min(170.5cqw, 100svh) - 122.82cqw - 11.8cqw));
+    left: 50%;
+    width: 100cqw;
+    margin-left: -50%;
+}
+
+.board-flower-top img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.board-flower-left,
+.board-flower-right {
+    bottom: 46.15cqw;
+}
+
+.board-flower-left img,
+.board-flower-right img {
+    display: block;
+    width: 48cqw;
+    height: auto;
+}
+
+.board-flower-left {
+    left: 12.8cqw;
+}
+
+.board-flower-right {
+    right: 12.8cqw;
+}
+
+#final-part .board-title {
+    top: 11.5%;
+    font-size: 5.13cqw;
+    line-height: 1.29;
+}
+
+#final-part .board-name {
+    top: 28.2%;
+    font-size: 3.08cqw;
+    line-height: 1.42;
+}
+
+#final-part .board-subtitle {
+    top: 39%;
+    font-size: 3.08cqw;
+    line-height: 1.42;
+}
+
+@media screen and (max-width: 425px) {
+    .wrap {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #final-part {
+        height: 100vh;
+        height: 100svh;
+    }
+}
+
+.font-congrats {
+    font-family: var(--primary-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25.78px;
+    color: #703D4B;
+}
+
+.font-name {
+    font-family: var(--secondary-font-family);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17.09px;
+    color: #825762;
+}
+
+.font-bubble {
+    font-family: var(--tertiary-font-family);
+    color: #58456B;
+    font-size: 11px;
+    text-align: center;
+}
+
+.with-bullets::before {
+    content: '•';
+    margin-right: 0.5rem; 
+  }
+
+  .with-bullets::after {
+    content: '•';
+    margin-left: 0.5rem; 
+}
+
+
+
+
