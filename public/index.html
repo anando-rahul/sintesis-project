@@ -155,7 +155,7 @@
                             Putri, M.Psi.</div>
                         <div
                             class="absolute top-[187px] left-0 right-0 mx-auto text-center font-name with-bullets board-subtitle">
-                            From</div>
+                            From Ka Nando</div>
                         <!-- End Board -->
                     </div>
 
@@ -181,11 +181,11 @@
 
         <!-- Modal Ucapan Kedua -->
         <div id="medium-modal" tabindex="-1" aria-hidden="true"
-            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 bg-opacity-60 transition-opacity duration-300"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 bg-opacity-60 transition-opacity duration-300 overflow-y-auto"
             style="display: none;">
-            <div class="relative w-full max-w-md max-h-full">
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <div class="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
+            <div class="relative w-full max-w-md my-auto max-h-[90vh] max-h-[90dvh] flex flex-col">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 flex flex-col max-h-[90vh] max-h-[90dvh] overflow-hidden modal-content-container">
+                    <div class="flex items-center justify-between p-4 md:p-5 pb-1 rounded-t dark:border-gray-600 shrink-0">
                         <button id="trigger-button" type="button"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
                             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -196,7 +196,7 @@
                             <span class="sr-only">Close modal</span>
                         </button>
                     </div>
-                    <div class="p-4 md:p-5 pt-0 space-y-4">
+                    <div class="p-4 md:p-5 pt-0 pb-6 space-y-4 overflow-y-auto modal-body-scroll">
                         <h1 class="text-center font-tertiary text-2xl"><b>SELAMAT YA!</b></h1>
                         <p class="text-tertiary text-base leading-relaxed text-justify">
                             Halo Citra Pangestika Putri, gimana kabar? Mudah-mudahan selalu dalam keadaan sehat ya.
@@ -300,6 +300,8 @@
             if (triggerFirstPart) {
                 triggerFirstPart.addEventListener('click', () => {
                     fadeOut(firstPart, () => {
+                        const modalBody = mediumModal ? mediumModal.querySelector('.modal-body-scroll') : null;
+                        if (modalBody) modalBody.scrollTop = 0;
                         fadeIn(mediumModal, 'flex');
                     });
                     if (finalPart) finalPart.style.display = 'none';
