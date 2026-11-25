@@ -12,6 +12,7 @@ module.exports = {
         'grow': 'grow 5s ease-in-out infinite',
         'grow-bottom': 'growBottom 5s ease-in-out infinite',
         'grow-once': 'growOnce 3s ease-in-out forwards', 
+        'slide-in-right': 'slideInRight 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards',
       },
       keyframes: {
         wiggle: {
@@ -37,6 +38,10 @@ module.exports = {
         growOnce: {
           '0%': { transform: 'scale(0.5)' },  
           '100%': { transform: 'scale(1)' },  
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       }
     },

@@ -207,6 +207,27 @@
     margin-left: 0.5rem; 
 }
 
+/* Cart slide-in from right animation (runs once) */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    will-change: transform, opacity;
+}
+
+.gift-decoration.animate-bounce {
+    will-change: transform;
+}
+
 /* Modal Ucapan Scroll Styling */
 #medium-modal {
     overflow-y: auto;
